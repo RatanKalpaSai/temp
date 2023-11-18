@@ -1,7 +1,10 @@
 const http = require('http');
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
 
 const host = 'localhost';
-const port = 3000;
 
 const server = http.createServer((req, res) => {
 
@@ -13,7 +16,7 @@ const server = http.createServer((req, res) => {
 
 })
 
-server.listen(port, host, () => {
+server.listen(PORT, host, () => {
     console.log(`Server is listening on http://${host}:${port}`);
 });
 
