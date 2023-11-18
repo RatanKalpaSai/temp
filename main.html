@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Cart addition</h1>
+
+    <button class="button" onclick="showItems()">Show items</button>
+    <button class="button" onclick="addItem()">Add 1 item</button>
+    <button class="button" onclick="addItem4()">Add 4 item</button>
+    <button class="button" onclick="deleteAllItems()">Delete All items</button>
+</body>
+
+<script>
+    let items = [];
+
+    let mapi = {
+        showItems: '4',
+        addItem: '6',
+        addItem4: '8',
+        deleteAllItems: '9',
+    };
+
+
+    function showItems() {
+        alert(`Items are = ${(items.length === 0) ? (`No items`) : (items)}`);
+
+        console.log(mapi);
+
+        alert(`use strict = ${mapi.showItems}`);
+        //alert(`Items are = ${items`);
+        // console.log(items);
+    }
+
+    function addItem() {
+        items.push(1);
+        items.push('ratan');
+        alert('Items Added');
+    }
+
+    function addItem4() {
+        items.push(3);
+        items.push(4);
+        items.push(5);
+        items.push('ok_bro');
+        alert('Items Added');
+    }
+
+    function deleteAllItems() {
+        items = [];
+        alert('Items Deleted');
+    }
+
+
+</script>
+
+</html>
